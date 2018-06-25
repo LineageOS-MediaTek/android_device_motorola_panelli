@@ -6,7 +6,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := nicklaus,e4plus
+TARGET_OTA_ASSERT_DEVICE := panelli,e4plus
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -85,5 +85,5 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui
 $(call inherit-product, device/mediatek/mt6737-common/mt6737.mk)
 
 # Vendor
-$(call inherit-product, vendor/motorola/nicklaus/nicklaus-vendor.mk)
+$(call inherit-product, vendor/motorola/panelli/panelli-vendor.mk)
 

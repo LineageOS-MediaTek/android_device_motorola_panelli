@@ -1,8 +1,8 @@
 Device Tree for Motorola Moto E4 Plus
 ===========================================
 
-The Motorola Moto E4 Plus (codenamed _"nicklaus"_) is a mid-range smartphone from Motorola.
-Click here to see [Building manual](https://github.com/LineageOS-MediaTek/android_device_motorola_nicklaus/tree/cm-14.1/MANUAL.md)
+The Motorola Moto E4 Plus (codenamed _"panelli"_) is a mid-range smartphone from Motorola.
+Click here to see [Building manual](https://github.com/LineageOS-MediaTek/android_device_motorola_panelli/tree/cm-14.1/MANUAL.md)
 
 Basic   | Spec Sheet
 -------:|:-------------------------
