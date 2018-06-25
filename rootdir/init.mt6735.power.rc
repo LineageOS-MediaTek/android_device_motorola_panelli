@@ -1,7 +1,5 @@
 on boot
 # Performance Profiles
-
-
 # Power save
 on property:sys.perf.profile=0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "858000"
@@ -17,8 +15,7 @@ on property:sys.perf.profile=0
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "interactive"
 
-
-# Balanced (normal, default as stock)
+# Balanced
 on property:sys.perf.profile=1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "1248000"
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq "1248000"
@@ -62,4 +59,3 @@ on property:sys.perf.profile=3
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "interactive"
-
