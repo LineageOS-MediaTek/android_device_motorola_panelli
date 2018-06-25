@@ -6,7 +6,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := panelli,e4plus
+TARGET_OTA_ASSERT_DEVICE := panelli
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -67,9 +67,20 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/com.motorola.motosignature.xml:system/etc/permissions/com.motorola.motosignature.xml \
     $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml
 
+# Root
+PRODUCT_PACKAGES += \
+    fstab.mt6735 \
+    init.mt6735.rc \
+    init.mt6735.conn.rc \
+    init.mt6735.modem.rc \
+    init.mt6735.power.rc \
+    init.mt6735.usb.rc \
+    ueventd.mt6735.rc
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,${LOCAL_PATH}/rootdir,root)
+   $(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
+   $(LOCAL_PATH)/rootdir/sbin/busybox:root/sbin/busybox
 
 # Thermal
 PRODUCT_COPY_FILES += \
