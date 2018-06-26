@@ -492,7 +492,9 @@ on post-fs-data
     chmod 0660 /dev/OV8865AF
     chmod 0660 /dev/SP8407AF
     chmod 0660 /dev/CAM_CAL_DRV
-
+    chmod 0660 /dev/CAM_CAL_DRV1
+    chmod 0660 /dev/CAM_CAL_DRV2
+    chmod 0660 /dev/CAM_CAL_DRV3
     chown system camera /sys/mipi_switch/mipi_switch
 
     chown system camera /dev/camera-sysram
@@ -519,6 +521,9 @@ on post-fs-data
     chown system camera /dev/OV8865AF
     chown system camera /dev/SP8407AF
     chown system camera /dev/CAM_CAL_DRV
+    chown system camera /dev/CAM_CAL_DRV1
+    chown system camera /dev/CAM_CAL_DRV2
+    chown system camera /dev/CAM_CAL_DRV3
 
     # MATV
     chmod 0660 /dev/MATV
