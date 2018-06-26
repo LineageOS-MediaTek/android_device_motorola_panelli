@@ -81,6 +81,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
    $(LOCAL_PATH)/rootdir/sbin/busybox:root/sbin/busybox
+   $(LOCAL_PATH)/rootdir/init.target.rc:root/init.target.rc
 
 # Thermal
 PRODUCT_COPY_FILES += \
