@@ -71,17 +71,8 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-   $(LOCAL_PATH)/rootdir/sbin/busybox:root/sbin/busybox \
-   $(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
-   $(LOCAL_PATH)/rootdir/fstab.mt6735:root/fstab.mt6735 \
-   $(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
-   $(LOCAL_PATH)/rootdir/init.mt6735.conn.rc:root/init.mt6735.conn.rc \
-   $(LOCAL_PATH)/rootdir/init.mt6735.modem.rc:root/init.mt6735.modem.rc \
-   $(LOCAL_PATH)/rootdir/init.mt6735.power.rc:root/init.mt6735.power.rc \
-   $(LOCAL_PATH)/rootdir/init.mt6735.rc:root/init.mt6735.rc \
-   $(LOCAL_PATH)/rootdir/init.mt6735.usb.rc:root/init.mt6735.usb.rc \
-   $(LOCAL_PATH)/rootdir/init.target.rc:root/init.target.rc \
-   $(LOCAL_PATH)/rootdir/ueventd.mt6735.rc:root/ueventd.mt6735.rc
+    $(call find-copy-subdir-files,*,${LOCAL_PATH}/rootdir,root)
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,${LOCAL_PATH}/configs/thermal,system/vendor/etc/.tp)
